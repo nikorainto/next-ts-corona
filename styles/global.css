@@ -1,0 +1,23 @@
+body,
+html,
+body > :first-child {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  color: #212121;
+  background-color: #fff;
+  font-size: 18px;
+  font-family: 'Varela Round Regular', -apple-system, BlinkMacSystemFont, Roboto,
+    'Segoe UI', 'Fira Sans', Avenir, 'Helvetica Neue', 'Lucida Grande',
+    sans-serif;
+}
+
+@font-face {
+  font-family: 'Varela Round Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Varela Round Regular'),
+    url('../public/fonts/VarelaRound-Regular.ttf') format('ttf');
+}
