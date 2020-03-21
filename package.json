@@ -1,7 +1,7 @@
 {
   "name": "corona-next",
   "version": "1.0.0",
-  "description": "",
+  "description": "Demo site",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

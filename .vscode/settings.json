@@ -13,6 +13,9 @@
   "prettier.useTabs": false,
   "prettier.ignorePath": ".prettierignore",
   "search.exclude": {
-    "**/.next": true
+    "**/.next": true,
+    "**/public": true,
+    "**yarn.lock": true,
+    "**package-lock.json": true
   }
 }

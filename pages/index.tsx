@@ -4,7 +4,7 @@ import Home from './home'
 
 const Index: any = () => {
   return (
-    <Layout title="title123">
+    <Layout title="Corona-next">
       <Home />
     </Layout>
   )
