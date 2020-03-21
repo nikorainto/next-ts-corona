@@ -1,8 +1,14 @@
 import React from 'react'
-import Hello from '../components/Hello'
+import { Header } from '../components/Header'
 
-const Home: any = () => {
-  return <Hello />
-}
+import { BodyContainer, ItemContainer } from '../styles/containers.styled'
+
+const Home: any = () => (
+  <BodyContainer>
+    <ItemContainer>
+      <Header />
+    </ItemContainer>
+  </BodyContainer>
+)
 
 export default Home
