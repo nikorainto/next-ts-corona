@@ -19,5 +19,5 @@ body > :first-child {
   font-style: normal;
   font-weight: normal;
   src: local('Varela Round Regular'),
-    url('../public/fonts/VarelaRound-Regular.ttf') format('ttf');
+    url('../public/VarelaRound-Regular.ttf') format('ttf');
 }
