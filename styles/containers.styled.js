@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const BodyContainer = styled.div`
-  margin: 40px 10px 10px 10px;
+  margin: 40px 20px 20px 20px;
   color: #334455;
 `
 
@@ -21,4 +21,11 @@ export const HeaderStyle = styled.div`
   img {
     max-width: 220px;
   }
+`
+
+export const ChartContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `

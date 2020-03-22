@@ -8,7 +8,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children, title }) => (
   <>
     <Head>
       <title>{title}</title>
-      <meta name="description" content="desc123" />
+      <meta name="description" content="Demo site" />
       <meta charSet="utf-8" />
       <meta
         name="viewport"
