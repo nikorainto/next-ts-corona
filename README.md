@@ -1,5 +1,7 @@
 # Corona Next
 
+https://corona-next.now.sh/
+
 ## Development
 
 ```
