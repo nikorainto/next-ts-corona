@@ -9,11 +9,11 @@ const Header: React.FC = () => (
     />
     <h1>Finlands corona-virus spread situation</h1>
     <p>
-      This is mainly a demo site for my own practise. I'v been taking most look
-      & feel from <a href="https://korona.kans.io/">https://korona.kans.io/</a>.
-      This site also shows how simply you can get full score from Chrome audit
-      tool. This demo is currently really simple and does not follow typescript
-      rules in orthodox manner.
+      This is mainly a demo site for my own interest and practice. I'v been
+      taking most look & feel from{' '}
+      <a href="https://korona.kans.io/">https://korona.kans.io/</a>. This site
+      also shows how simply you can get (almost) full score from Chrome audit
+      tool.
     </p>
   </HeaderStyle>
 )

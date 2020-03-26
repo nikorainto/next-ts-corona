@@ -12,7 +12,7 @@ const development = process.env.NOVE_ENV === 'development'
 export interface CoronaData {
   confirmed: Confirmed[]
   recovered: Recovered[]
-  deaths: any[]
+  deaths: Deaths[]
 }
 
 interface BaseItem {
@@ -41,7 +41,7 @@ export enum InfectionSourceEnum {
   Unknown = 'unknown',
 }
 
-export const GeneralContext = createContext<any>({
+export const GeneralContext = createContext<CoronaData>({
   confirmed: [],
   deaths: [],
   recovered: [],
@@ -62,7 +62,7 @@ const Index: NextPage<CoronaData> = ({ confirmed, deaths, recovered }) => {
   )
 }
 
-Index.getInitialProps = async function() {
+Index.getInitialProps = async function () {
   if (development) {
     const devData = require('../utils/devData.json')
     return devData
