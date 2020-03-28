@@ -11,9 +11,14 @@ const Header: React.FC = () => (
     <p>
       This is mainly a demo site for my own interest and practice. I'v been
       taking most look & feel from{' '}
-      <a href="https://korona.kans.io/">https://korona.kans.io/</a>. This site
-      also shows how simply you can get (almost) full score from Chrome audit
-      tool.
+      <a
+        href="https://korona.kans.io/"
+        target="_blank"
+        rel="noopener noreferrer">
+        https://korona.kans.io/
+      </a>
+      . This site also shows how simply you can get (almost) full score from
+      Chrome audit tool.
     </p>
   </HeaderStyle>
 )

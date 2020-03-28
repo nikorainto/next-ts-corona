@@ -80,7 +80,7 @@ const InfectionsLast30DaysLineChart: React.FC = () => {
   return (
     <ChartContainer>
       <h3>Daily development last 30 days</h3>
-      <ResponsiveContainer width={'100%'} height={350}>
+      <ResponsiveContainer width={'100%'} height={350} id="chartPast30Days">
         <LineChart width={500} height={300} data={calculateResultsForEachDay()}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" tick={{ fontSize: 12 }} />

@@ -90,7 +90,7 @@ const InfectionsOverTimeLineChart: React.FC = () => {
   return (
     <ChartContainer>
       <h3>Total statistics from start</h3>
-      <ResponsiveContainer width={'100%'} height={350}>
+      <ResponsiveContainer width={'100%'} height={350} id="chartOverall">
         <LineChart width={500} height={300} data={splitTimespanToDatapoints()}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />

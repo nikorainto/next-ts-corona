@@ -16,12 +16,12 @@ const InfectionsQuickValues: React.FC = () => {
     <BlockContainer>
       <div>
         Infected:
-        <Block color="#adad24">{confirmed.length}</Block>
+        <Block color="#827717">{confirmed.length}</Block>
       </div>
 
       <div>
         Healed:
-        <Block color="#008c00">{recovered.length}</Block>
+        <Block color="#1B5E20">{recovered.length}</Block>
       </div>
 
       <div>
