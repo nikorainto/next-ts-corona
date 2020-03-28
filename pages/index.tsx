@@ -3,7 +3,10 @@ import { NextPage } from 'next'
 import fetch from 'isomorphic-unfetch'
 import Layout from '../components/Layout'
 import { Header } from '../components/Header'
-import { InfectionsByArea } from '../components/InfectionsByArea'
+import { Footer } from '../components/Footer'
+import { InfectionsQuickValues } from '../components/InfectionsQuickValues'
+import { InfectionsOverTimeLineChart } from '../components/InfectionsOverTimeLineChart'
+import { InfectionsLast30DaysLineChart } from '../components/InfectionsLast30DaysLineChart'
 
 import { BodyContainer, ItemContainer } from '../styles/containers.styled'
 
@@ -54,9 +57,14 @@ const Index: NextPage<CoronaData> = ({ confirmed, deaths, recovered }) => {
         <BodyContainer>
           <ItemContainer>
             <Header />
-            <InfectionsByArea />
+            <InfectionsQuickValues />
+            <InfectionsOverTimeLineChart />
+            <br />
+            <InfectionsLast30DaysLineChart />
           </ItemContainer>
         </BodyContainer>
+        <br />
+        <Footer />
       </GeneralContext.Provider>
     </Layout>
   )

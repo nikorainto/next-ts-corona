@@ -23,7 +23,7 @@ export interface Data {
 const dateFormatString = 'd.M'
 const daysBetweenDataPoints = 7
 
-const InfectionsByArea: React.FC = () => {
+const InfectionsOverTimeLineChart: React.FC = () => {
   const { confirmed, deaths, recovered } = useContext(GeneralContext)
 
   const daysBetweenStartAndNow = differenceInCalendarDays(
@@ -87,13 +87,11 @@ const InfectionsByArea: React.FC = () => {
     return data
   }
 
-  const data = splitTimespanToDatapoints()
-
   return (
     <ChartContainer>
-      <h3>Corona spread in Finland</h3>
+      <h3>Total statistics from start</h3>
       <ResponsiveContainer width={'100%'} height={350}>
-        <LineChart width={500} height={300} data={data}>
+        <LineChart width={500} height={300} data={splitTimespanToDatapoints()}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />
@@ -108,4 +106,4 @@ const InfectionsByArea: React.FC = () => {
   )
 }
 
-export { InfectionsByArea }
+export { InfectionsOverTimeLineChart }
