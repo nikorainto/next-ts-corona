@@ -16,6 +16,7 @@ export interface CoronaData {
   confirmed: Confirmed[]
   recovered: Recovered[]
   deaths: Deaths[]
+  hospitalised: Hospitalised[]
 }
 
 interface BaseItem {
@@ -39,6 +40,15 @@ export interface Recovered extends BaseItem {
   date: Date
 }
 
+export interface Hospitalised extends BaseItem {
+  date: Date
+  area: String
+  totalHospitalised: Number
+  inWard: Number
+  inIcu: Number
+  dead: Number
+}
+
 export enum InfectionSourceEnum {
   RelatedToEarlier = 'related to earlier',
   Unknown = 'unknown',
@@ -48,12 +58,19 @@ export const GeneralContext = createContext<CoronaData>({
   confirmed: [],
   deaths: [],
   recovered: [],
+  hospitalised: [],
 })
 
-const Index: NextPage<CoronaData> = ({ confirmed, deaths, recovered }) => {
+const Index: NextPage<CoronaData> = ({
+  confirmed,
+  deaths,
+  recovered,
+  hospitalised,
+}) => {
   return (
     <Layout title="Corona-next">
-      <GeneralContext.Provider value={{ confirmed, deaths, recovered }}>
+      <GeneralContext.Provider
+        value={{ confirmed, deaths, recovered, hospitalised }}>
         <BodyContainer>
           <ItemContainer>
             <Header />
@@ -75,11 +92,18 @@ Index.getInitialProps = async function () {
     const devData = require('../utils/devData.json')
     return devData
   } else {
-    const res = await fetch(
+    const res1 = await fetch(
       'https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData/v2'
     )
-    const data = await res.json()
-    return data
+    const { confirmed, deaths, recovered } = await res1.json()
+
+    const res2 = await fetch(
+      'https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaHospitalData'
+    )
+
+    const { hospitalised } = await res2.json()
+
+    return { confirmed, deaths, recovered, hospitalised }
   }
 }
 
